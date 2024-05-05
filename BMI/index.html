@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="bmi">
+        <h1>BMI CALCULATOR</h1>
+    <div class="data">
+        <label>Weight</label>
+        <div class="con" id="cont" >
+            <input type="text" id="inpiutinweigthkg" placeholder="Enter weigth in kg" />
+            <input type="text" id="inputinweigthpounds" placeholder="Enter weight in pounds" />
+
+            <select id="weight">
+                <option value="kg">kg</option>
+                <option value="pounds">pounds</option>
+            </select>
+        </div>
+       
+        <div>
+        <label>Height</label>
+        <div class="con" >
+        
+            <input type="number"id="inputinHeigthmt"  placeholder="Enter heigth in meters"/>
+            <input type="number"id="inputinHeigthcmt"  placeholder="Enter heigth in centimeters"/>
+            <input type="number"id="inputinHeigthfeets"  placeholder="feets"/>
+            <input type="number"id="inputinHeigthin"  placeholder="inches"/>
+        <select id="Height">
+            <option value="meters">meters</option>
+            <option value="centimeters">centimeters</option>
+            <option value="feet">feet</option>
+        </select>
+        </div>
+        </div>
+        <button onclick="calculate()">Calculate</button>
+    </div>
+    <div class="result">
+          <h2> Your BMI is 18.2</h2>
+          <p id="sa">you need to gain Weight</p>
+          <div class="measure">
+            <p>below 18.5 – you're in the underweight range</p>
+              <p> 18.5 to 24.9 – you're in the healthy weight range</p>
+            <p> 25 to 29.9 – you're in the overweight range</p>
+            <p> 30 or over – you're in the obese range</p>
+          </div>
+          <button onclick="window.location.reload()">Try once</button>
+    </div>
+   
+</div>     
+</body>
+<script>
+    let weight=document.getElementById('weight')
+    let height=document.getElementById('Height')
+    let weightinkg=document.getElementById('inpiutinweigthkg')
+    let weightinpounds=document.getElementById('inputinweigthpounds')
+    let heightinmt=document.getElementById('inputinHeigthmt')
+    let heightincm=document.getElementById('inputinHeigthcmt')
+    let heightinfeet=document.getElementById('inputinHeigthfeets')
+    let heightininch=document.getElementById('inputinHeigthin')
+     let result=document.querySelector('.result')
+     let form=document.querySelector('.data')
+     weight.addEventListener('change',()=>{
+     if(weight.value=='kg'){
+          weightinkg.style.display='block';
+          weightinpounds.style.display='none';
+     }
+     else{
+        weightinkg.style.display='none';
+        weightinpounds.style.display='block';
+     }
+       
+    })
+    height.addEventListener('change',()=>{
+        if(height.value=='meters'){
+            heightinmt.style.display='block';
+            heightincm.style.display='none';
+            heightinfeet.style.display='none';
+            heightininch.style.display='none';
+        }
+        if(height.value=='centimeters'){
+            heightinmt.style.display='none';
+            heightincm.style.display='block';
+            heightinfeet.style.display='none';
+            heightininch.style.display='none';
+        }
+        if(height.value=='feet'){
+            heightinmt.style.display='none';
+            heightincm.style.display='none';
+            heightinfeet.style.display='block';
+            heightininch.style.display='block';
+        }
+        
+    })
+    function calculate(){
+        let heightinpmt=0;
+        let weightinpkg=0;
+        if(weight.value=='kg'){
+            weightinpkg=weightinkg.value;
+        }
+        else if(weight.value=='pounds'){
+            weightinpkg=weightinpounds.value*0.453592;
+        }
+        if(height.value=='meters'){
+            heightinpmt=heightinmt.value;
+        }
+        else if(height.value=='centimeters'){
+            heightinpmt=heightincm.value*0.01;
+        }
+        else{
+            heightinpmt=heightinfeet.value*0.3048+heightininch.value*0.0254;
+        }
+        let bmi=weightinpkg/(heightinpmt*heightinpmt);
+        let status=''
+        if(bmi<=18.5){
+               status='you need to gain weight'
+        }
+        else if(bmi>=18.5 && bmi<=24.9){
+            status='you are fit'
+        }
+        else{
+            status='you are obese'
+        }
+        result.style.display='block';
+        form.style.display='none';
+        document.querySelector('.result h2').innerHTML='your BMI is: '+bmi.toFixed(3);
+        document.querySelector('.result p').innerHTML=status;
+         
+    }
+
+</script>
+</html>
