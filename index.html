@@ -172,7 +172,7 @@
     .pub-card { background: var(--card); border: 1px solid var(--border); border-radius: 4px; padding: 1.6rem 2rem; display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 1.5rem; transition: border-color 0.3s; }
     .pub-card:hover { border-color: var(--accent); }
     .pub-badge { font-family: 'DM Mono', monospace; font-size: 0.62rem; letter-spacing: 0.15em; padding: 0.28rem 0.6rem; background: rgba(0,229,195,0.08); color: var(--accent); border: 1px solid rgba(0,229,195,0.25); border-radius: 2px; white-space: nowrap; }
-    .pub-title { font-size: 0.92rem; line-height: 1.6; color: var(--text); }
+    .pub-title { font-size: 1rem; line-height: 1.6; color: var(--text); }
     .pub-link { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--muted); text-decoration: none; white-space: nowrap; transition: color 0.2s; }
     .pub-link:hover { color: var(--accent); }
 
@@ -183,6 +183,8 @@
     .cert-card:hover { border-color: var(--accent); transform: translateY(-3px); }
     .cert-issuer { font-family: 'DM Mono', monospace; font-size: 0.65rem; color: var(--accent); letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 0.4rem; }
     .cert-name { font-size: 0.86rem; color: var(--text); line-height: 1.5; }
+     #App { background: var(--bg2); }
+   .app-content{font-size: 0.90rem}
 
     /* Contact */
     #contact { background: var(--bg2); }
@@ -247,10 +249,9 @@
   <div class="hero-left">
     <div class="hero-tag">Full Stack Developer &amp; AI Researcher</div>
     <h1 class="hero-name">Pooja M</h1>
-    <div class="hero-role">Angular · React · Spring Boot · Deep Learning</div>
+    <div class="hero-role">Angular · Next.js · Spring Boot · Deep Learning</div>
     <p class="hero-desc">
-      B.Tech IT student at St. Joseph's College of Engineering, Chennai — building
-      modular UIs, robust backends, and publishing IEEE research on AI-based medical imaging.
+       Full stack developer - Building modular UIs, robust backends, and publishing IEEE research on AI-based medical imaging.
     </p>
     <div class="hero-cta">
       <a href="#projects" class="btn btn-primary">View Projects</a>
@@ -290,7 +291,7 @@
   </div>
   <div class="about-grid">
     <div class="about-text reveal">
-      <p>I'm a <strong>final-year B.Tech Information Technology</strong> student at St. Joseph's College of Engineering, Chennai. I enjoy crafting full-stack applications — from pixel-perfect Angular components to optimised Spring Boot APIs.</p>
+      <p>I'm a <strong>Full stack web developer</strong>. I enjoy crafting full-stack applications — using Next.js,node.js,express.</p>
       <p>My research interests lie at the intersection of <strong>deep learning and medical imaging</strong>. I've published two IEEE papers on the filed of AI in Medical imaging</p>
       <p>Beyond code, I'm an avid competitive programmer with <strong>230+ problems on LeetCode</strong> and <strong>1100+ on SkillRack</strong>, always looking to sharpen my algorithmic thinking.</p>
     </div>
@@ -300,7 +301,7 @@
       <div class="info-item"><span class="info-k">Location</span><span class="info-v">Chennai, India</span></div>
       <div class="info-item"><span class="info-k">LinkedIn</span><span class="info-v"><a href="https://www.linkedin.com/in/pooja-m-71521325b/" target="_blank">pooja-m</a></span></div>
       <div class="info-item"><span class="info-k">GitHub</span><span class="info-v"><a href="https://github.com/poojachitra" target="_blank">poojachitra</a></span></div>
-      <div class="info-item"><span class="info-k">CGPA</span><span class="info-v">8.92</span></div>
+      <div class="info-item"><span class="info-k">CGPA</span><span class="info-v">8.91</span></div>
       <div class="info-item"><span class="info-k">Grad</span><span class="info-v">2026</span></div>
     </div>
   </div>
@@ -322,9 +323,13 @@
     <div>
       <div class="exp-role">Project Trainee</div>
       <ul class="exp-bullets">
-        <li>Engineered modular Angular UI components that boosted feature delivery speed  and improved maintainability.</li>
-        <li>Integrated and optimized Spring Boot REST endpoints for high-performance data exchange.</li>
-        <li>Designed and executed robust CRUD operations in PostgreSQL, improving system stability and reducing data errors.</li>
+        <li>UI - Developed Angular UI components and implemented frontend features for web application interfaces.
+</li>
+        <li>REST API - Created Spring Boot REST APIs to enable communication between frontend and backend modules.
+.</li>
+        <li>DataBase - Worked with PostgreSQL CRUD operations for data storage, retrieval, and database management.
+</li>
+        <li>Documentation -  Prepared technical documentation to support project understanding and development workflows.</li>
       </ul>
     </div>
   </div>
@@ -338,9 +343,17 @@
     <div>
       <div class="exp-role">Web Developer Intern</div>
       <ul class="exp-bullets">
-        <li>Utilized WordPress to develop and maintain dynamic web pages, ensuring responsive design and smooth user experience.</li>
-        <li>Integrated and worked with CRM systems to streamline customer data management and enhance communication workflows.</li>
-        <li>Contributed to optimizing website performance and improving content delivery.</li>
+        <li>Website - Utilized WordPress to develop and maintain dynamic web pages, ensuring responsive design and smooth user
+experience
+</li>
+        <li>CRM -  Integrated and worked with CRM systems to streamline customer data management and enhance communication
+workflows</li>
+        <li>Applied Ciro and Happenstance AI tools to solve technical bottlenecks and improve team productivity.</li>
+        <li>Designed and iterated on user interfaces within Figma, ensuring seamless visual consistency across project components.</li>
+        <li>Documentation - Reviewed application functionality and prepared documentation to support testing, project updates, and
+future maintenance.
+</li>
+        
       </ul>
     </div>
   </div>
@@ -370,7 +383,7 @@
       <div class="proj-desc">Responsive task-management dashboard with drag-and-drop interactions. Built with reusable Angular modules and services, accelerating front-end cycles by 15%. Leverages browser local storage for persistent task data.</div>
       <div class="proj-tags">
         <span class="ptag">Next.js</span>
-        <span class="ptag">LocalStorage</span>
+       
       </div>
       <a href="https://github.com/poojachitra/task_manager" class="proj-link">View on GitHub</a>
     </div>
@@ -379,7 +392,7 @@
       <div class="proj-name">Weather App</div>
       <div class="proj-desc">Real-time weather application displaying temperature, humidity, and conditions via external API integration. Clean, responsive React UI designed for seamless cross-device experience.</div>
       <div class="proj-tags">
-        <span class="ptag">Next.js</span><span class="ptag">API Integration</span><span class="ptag">Responsive UI</span>
+        <span class="ptag">Next.js</span>
       </div>
       <a href="https://github.com/poojachitra/Weather_app" class="proj-link">View on GitHub</a>
    
@@ -468,8 +481,8 @@
       <div class="edu-school">St. Joseph's College of Engineering</div>
       <div class="edu-degree">B.Tech in Information Technology</div>
       <div class="edu-meta">
-        <span class="edu-year">2022 – 2026</span>
-        <span class="edu-grade">CGPA: 8.92</span>
+        <span class="edu-year">2026</span>
+        <span class="edu-grade">CGPA: 8.91</span>
         <span class="edu-grade">Chennai, India</span>
       </div>
     </div>
@@ -560,6 +573,28 @@
     <div class="cert-card reveal"><div class="cert-issuer">Wipro TalentNext</div><div class="cert-name">Java Full Stack</div></div>
 
   </div>
+</section>
+<section id="App">
+  <div class="section-header reveal">
+    <span class="sec-num"></span>
+   
+    <h2 class="sec-title">Appreciations</h2>
+    <div class="sec-line"></div>
+  </div>
+  <div class="pub-list">
+    <div class="pub-card reveal">
+      
+      <div class="pub-title"><strong>Certifacte of Appreciation - Thoothukudi District Police Hackathon</strong>
+</div>
+      <a href="https://drive.google.com/file/d/1W9TjKBfsFP_khHHb9ukI2fcX2znhehPE/view?usp=sharing" class="pub-link">View →</a>
+      <br>
+      <div class="app-content">
+      
+        <p>Recognized for active participation in Hackathon 2025 by submitting a working prototype on 12.04.2025. Appreciated for demonstrating innovative thinking, dedication, and the ability to develop practical solutions through technology.</p>
+     
+      </div>
+    </div>
+   
 </section>
 
 <!-- CONTACT -->
